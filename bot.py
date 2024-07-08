@@ -6,6 +6,8 @@ from database.models import async_main
 
 TOKEN = '7176081427:AAGlj4W7tgIrU-9rRZOBWY3mFXgdj3EwkjE'
 
+    
+
 
 async def main():
     await async_main()
@@ -20,6 +22,8 @@ if __name__ == '__main__':
         asyncio.run(main())
     except:
         print('gg')
+
+
 
 
 

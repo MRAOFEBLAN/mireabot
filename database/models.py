@@ -15,7 +15,8 @@ class User(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     tg_id = mapped_column(BigInteger)
     save: Mapped[str] = mapped_column()
-    
+    time: Mapped[str] = mapped_column()
+    extra: Mapped[int] = mapped_column()
 
 class Category(Base):
     __tablename__ = 'kafedras'
@@ -31,6 +32,7 @@ class Item(Base):
     description: Mapped[str] = mapped_column()
     rarity: Mapped[str] = mapped_column()
     kafedra: Mapped[str] = mapped_column(ForeignKey('kafedras.id'))
+    masters: Mapped[int] = mapped_column()
 
 async def async_main():
     async with engine.begin() as conn:
